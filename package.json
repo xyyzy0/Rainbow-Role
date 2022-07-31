@@ -9,6 +9,7 @@
     "discord-api-types": "^0.36.2",
     "discord.js": "^14.0.2",
     "dotenv": "^16.0.1",
+    "node-fetch": "2.0.0",
     "quick.db": "^9.0.6",
     "simple-json-db": "^2.0.0"
   }
