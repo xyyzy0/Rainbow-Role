@@ -22,17 +22,18 @@ var Command = new Slash(
             var Uptime = new Date().getTime() - process.uptime();
 
             // 💻 Calculate to unix time and format
-            var UptimeFormatted = time(Uptime/1000, "R");
+            var UptimeFormatted = time(Math.round(Uptime/1000), "R");
 
             // 💭 Send message
             Interaction.reply({ 
-                ephemeral: true,
+                ephemeral: false,
                 embeds: [
                     Utility.Embed(Client)
                        .setAuthor({ name: Client.user.tag, iconURL: Client.user.displayAvatarURL({ forceStatic: false }) })
                        .setDescription([ // 👌 Too lazy to change this, so simple .map and .join 🤪
                             { name: "🍃 Node.JS", value: inlineCode(process.version) },
                             { name: "💻 Platform", value: inlineCode( platform[0].toUpperCase() + platform.slice(1) ) },
+                            { name: "⏳ Started", value: UptimeFormatted },
                             { name: "🧱 Memory Usage", value: inlineCode(MemoryPercentage + "%") }
                        ].map(e => e.name + "\n - " + e.value).join("\n"))
                 ]
