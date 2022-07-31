@@ -1,8 +1,6 @@
-var { SlashCommandBuilder, time, inlineCode, PermissionFlagsBits, roleMention } = require('discord.js');
-var Package = require('../package.json');
+var { SlashCommandBuilder, PermissionFlagsBits, roleMention } = require('discord.js');
 var Utility = require('../libs/Utility');
 var Slash = require('../libs/Slash');
-var Command = new Slash("ping");
 
 
 var Command = new Slash(

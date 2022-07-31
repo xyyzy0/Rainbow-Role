@@ -2,7 +2,6 @@ var { SlashCommandBuilder, time, inlineCode } = require('discord.js');
 var Package = require('../package.json');
 var Utility = require('../libs/Utility');
 var Slash = require('../libs/Slash');
-var Command = new Slash("ping");
 
 var Command = new Slash(
     {

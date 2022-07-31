@@ -152,13 +152,13 @@ Client.on("interactionCreate", Interaction => {
     };
     
     // 📜 Check if array's length of allowed users doesn't equals 0
-    if(Command.AllowedUser >= 1) {
+    if(Command.AllowedUser.length >= 1) {
 
         // ✅ Check if user is allowed to use this command
         if(!Command.AllowedUser.includes(Interaction.user.id)) {
 
             Logger.INFO("User " + chalk.yellow(Interaction.user.tag) + " is not allowed to use command " + chalk.yellow(Interaction.commandName));
-            return Interaction.reply({ ephemeral: true, embeds: [ Embed(Interaction.user).setDescription("Sorry! You are not allowed to use this command!") ] });
+            return Interaction.reply({ ephemeral: true, embeds: [ Utility.Embed(Interaction.user).setDescription("Sorry! You are not allowed to use this command!") ] });
         
         } else { // 😍 User is allowed to use command
             
@@ -167,7 +167,6 @@ Client.on("interactionCreate", Interaction => {
             // 💉 Execute command's function
             return Command.executor(Interaction, Client, Interaction.member);
         };
-
     };
 
     Logger.INFO("User " + chalk.yellow(Interaction.user.tag) + " used command " + chalk.yellow(Interaction.commandName) + " on " + chalk.yellow(Interaction.guild.name));            
