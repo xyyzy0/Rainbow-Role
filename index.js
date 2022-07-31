@@ -25,7 +25,7 @@ Client.on('ready', async () => {
     Logger.INFO("Welcome! Your bot " + chalk.yellow(Client.user.tag) + " is now ready to work!");
 
     // 💳 Register all bot's slash commands
-    await registerSlashes(Client, { global: false, guild: "991088591201517600" });
+    await registerSlashes(Client, { global: true, guild: "991088591201517600" });
     Logger.INFO("Registeried all slash commands.")
     
     // ⭐ Set bot's activity 
