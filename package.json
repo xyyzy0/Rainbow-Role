@@ -1,7 +1,7 @@
 {
   "name": "Rainbow-Role-Bot",
   "repository": "https://github.com/xyyzy0/Rainbow-Role",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "@discordjs/rest": "^1.0.0",
     "better-sqlite3": "^7.6.2",
