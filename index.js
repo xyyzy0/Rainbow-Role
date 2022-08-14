@@ -35,7 +35,7 @@ Client.on('ready', async () => {
           type: Discord.ActivityType.Watching,
           name: statuses[currentStatus]
       });
-      currentStatus + 1 > statuses.length ? 0 currentStatus++;
+      currentStatus + 1 > statuses.length ? 0 : currentStatus++;
     }, 12500)
 
     // 🌈 Rainbow roles
