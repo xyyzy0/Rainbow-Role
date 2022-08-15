@@ -34,7 +34,9 @@ var Command = new Slash(
                             { name: "🍃 Node.JS", value: inlineCode(process.version) },
                             { name: "💻 Platform", value: inlineCode( platform[0].toUpperCase() + platform.slice(1) ) },
                             { name: "⏳ Started", value: UptimeFormatted },
-                            { name: "🧱 Memory Usage", value: inlineCode(MemoryPercentage + "%") }
+                            { name: "🧱 Memory Usage", value: inlineCode(MemoryPercentage + "%") },
+                            { name: "📃 Support Server", value: inlineCode("https://discord.gg/vwBAZR2RTJ") }
+
                        ].map(e => e.name + "\n - " + e.value).join("\n"))
                 ]
              })
