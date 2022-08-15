@@ -35,7 +35,7 @@ var Command = new Slash(
                             { name: "💻 Platform", value: inlineCode( platform[0].toUpperCase() + platform.slice(1) ) },
                             { name: "⏳ Started", value: UptimeFormatted },
                             { name: "🧱 Memory Usage", value: inlineCode(MemoryPercentage + "%") },
-                            { name: "📃 Support Server", value: inlineCode("https://discord.gg/vwBAZR2RTJ") }
+                            { name: "🔗 Support Server", value: "https://discord.gg/vwBAZR2RTJ" }
 
                        ].map(e => e.name + "\n - " + e.value).join("\n"))
                 ]
