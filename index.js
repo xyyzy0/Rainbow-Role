@@ -3,7 +3,7 @@ const { config } = require('dotenv'); // 🦈 Load dotenv's module config functi
 const fs = require('fs'); // 📁 Load default node.js File System module
 const { default: chalk } = require('chalk') // 🎨 Load chalk for console colors
 const { QuickDB } = require('quick.db'); // 📠 Load database module
-const statuses = ["🌈 Rainbow", "/about"]; // 📃 Create a table with all bot statuses
+const statuses = ["🌈 Rainbow", "/about", "/role set/remove"]; // 📃 Create a table with all bot statuses
 // 📚 Load Libs
 const Logger = require('./libs/Logger')
 const Utility = require('./libs/Utility');
@@ -36,7 +36,7 @@ Client.on('ready', async () => {
           name: statuses[currentStatus]
       });
       currentStatus = currentStatus + 1 > statuses.length ? 0 : currentStatus++;
-    }, 12500)
+    }, 17500)
 
     // 🌈 Rainbow roles
 
