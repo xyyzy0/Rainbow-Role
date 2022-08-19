@@ -4,6 +4,7 @@ const fs = require('fs'); // 📁 Load default node.js File System module
 const { default: chalk } = require('chalk') // 🎨 Load chalk for console colors
 const { QuickDB } = require('quick.db'); // 📠 Load database module
 const statuses = ["🌈 Rainbow", "/about", "/role set/remove"]; // 📃 Create a table with all bot statuses
+
 // 📚 Load Libs
 const Logger = require('./libs/Logger')
 const Utility = require('./libs/Utility');
@@ -31,13 +32,15 @@ Client.on('ready', async () => {
     // ⭐ Set bot's activity 
     var currentStatus = 0;
     setInterval(() => {
-     Client.user.setActivity({
-          type: Discord.ActivityType.Watching,
-          name: statuses[currentStatus]
-      });
+        Client.user.setActivity({
+            type: Discord.ActivityType.Watching,
+            name: statuses[currentStatus]
+        });
 
-      currentStatus++;
-      if(currentStatus + 1 > statuses.length) currentStatus = 0;
+        Logger.INFO("Changed bot status to " + statuses[currentStatus])
+
+        currentStatus++;
+        if(currentStatus + 1 > statuses.length) currentStatus = 0;
     }, 15000)
 
     // 🌈 Rainbow roles
@@ -130,7 +133,7 @@ Client.on("guildCreate", async Guild => {
         embeds: [
             Utility
                .Embed(Client.user)
-               .addFields({ name: "Hi!", value: "Thank you for adding our bot to your server 👋\nThe bot was created to enable the creation of rainbow roles! 🌈" })                
+               .addFields({ name: "Hi!", value: "Thank you for adding our bot to your server 👋\nThe bot was created to enable the creation of rainbow roles! 🌈" }, { name: "Support Server", value: "" })                
         ]
     });
 
