@@ -17,8 +17,8 @@ var Command = new Slash(
             Interaction.reply({
                 embeds: [
                     Utility.Embed(Interaction.member.user)
-                        .setTitle(title.toString())
-                        .setDescription(description.toString())
+                        .setTitle(title)
+                        .setDescription(description)
                 ]
             })
 
