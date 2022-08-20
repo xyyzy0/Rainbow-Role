@@ -8,10 +8,6 @@ var Command = new Slash(
         name: "embed",
         builder: new SlashCommandBuilder().setDescription("🗞 Send Embed").addStringOption(title => title.setName("title").setDescription("🏅 Embed title").setRequired(true)).addStringOption(description => description.setName("description").setDescription("🍃 Embed description").setRequired(true)),
         executor: async (Interaction, Client) => {
-            
-            /**
-             * @type {String}
-             */
             var title = Interaction.options.get("title").value??"null";
             var description = Interaction.options.get("description").value??"null";
             Interaction.reply({
