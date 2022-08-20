@@ -3,6 +3,12 @@ var Package = require('../package.json');
 var Utility = require('../libs/Utility');
 var Slash = require('../libs/Slash');
 
+// ⌚ Calculate uptime
+var Uptime = new Date().getTime() - process.uptime();
+
+// 💻 Calculate to unix time and format
+var UptimeFormatted = time(Math.round(Uptime/1000), "R");
+
 var Command = new Slash(
     {
         name: "about",
@@ -17,12 +23,6 @@ var Command = new Slash(
             var MemoryUsed = Memory.heapUsed;
             var MemoryTotal = Memory.heapTotal;
             var MemoryPercentage = Math.round(MemoryUsed/MemoryTotal * 100);
-
-            // ⌚ Calculate uptime
-            var Uptime = new Date().getTime() - process.uptime();
-
-            // 💻 Calculate to unix time and format
-            var UptimeFormatted = time(Math.round(Uptime/1000), "R");
 
             // 💭 Send message
             Interaction.reply({ 
