@@ -11,6 +11,8 @@ var Command = new Slash(
         executor: async (Interaction, Client) => {
             var user = Interaction.options.getUser("user")??"null";
             var reason = Interaction.options.get("reason").value??"No reason provided";
+            var { guild } = Interaction;
+
 
             // 🤖 Get bot's member instance on this guild
             var { me } = guild.members;
