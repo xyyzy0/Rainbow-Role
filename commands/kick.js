@@ -1,4 +1,4 @@
-var { SlashCommandBuilder, codeBlock, PermissionFlagsBits} = require('discord.js');
+var { SlashCommandBuilder, codeBlock, PermissionFlagsBits } = require('discord.js');
 var Utility = require('../libs/Utility');
 var Slash = require('../libs/Slash');
 const { default: fetch } = require('node-fetch');
@@ -70,6 +70,5 @@ var Command = new Slash(
 
             }
     }
-)
 
 module.exports = Command;
