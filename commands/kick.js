@@ -68,7 +68,7 @@ var Command = new Slash(
                 ]
             })
 
-            })
-    }
+            }
+    })
 
 module.exports = Command;
