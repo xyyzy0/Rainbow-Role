@@ -36,7 +36,7 @@ var Command = new Slash(
                             { name: "⏳ Started", value: UptimeFormatted },
                             { name: "🧱 Memory Usage", value: inlineCode(MemoryPercentage + "%") },
                             { name: "🔗 Support Server", value: "https://discord.gg/vwBAZR2RTJ" },
-                            { name: "🌍 Servers", value: Client.guilds.cache.size.toString()}
+                            { name: "🌍 Servers", value: inlineCode( Client.guilds.cache.size.toString() )}
                        ].map(e => e.name + "\n - " + e.value).join("\n"))
                 ]
              })
