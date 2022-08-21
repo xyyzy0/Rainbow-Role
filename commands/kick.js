@@ -7,7 +7,7 @@ var Command = new Slash(
     {
         name: "kick",
         permissions: PermissionFlagsBits.KickMembers,
-        builder: new SlashCommandBuilder().setDescription("🦵 Kick member").addUserOption(user => user.setName("user").setDescription("👤 User to kick").setRequired(true)).addStringOption(reason => reason.setName("reason").setDescription("📖 Kick Reason").setRequired(false)),
+        builder: new SlashCommandBuilder().setDescription("🦵 Kick member").addUserOption(user => user.setName("user").setDescription("👤 User to kick").setRequired(true)).addStringOption(reason => reason.setName("reason").setDescription("📖 Kick Reason").setRequired(true)),
         executor: async (Interaction, Client) => {
             var user = Interaction.options.getUser("user")??"null";
             var reason = Interaction.options.get("reason").value??"No reason provided";
