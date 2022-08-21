@@ -67,7 +67,7 @@ var Command = new Slash(
                         .setDescription(member.user.tag + " was kicked by " + Interaction.member.user + " with reason: " + reason)
                 ]
             })
-
+}
             }
     })
 
