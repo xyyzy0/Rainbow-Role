@@ -9,7 +9,7 @@ var Command = new Slash(
         permissions: PermissionFlagsBits.KickMembers,
         builder: new SlashCommandBuilder().setDescription("🦵 Kick member").addUserOption(user => user.setName("user").setDescription("👤 User to kick").setRequired(true)).addStringOption(reason => reason.setName("reason").setDescription("📖 Kick Reason").setRequired(false)),
         executor: async (Interaction, Client) => {
-            var user = Interaction.options.get("user").value??"null";
+            var user = Interaction.options.getUser("user")??"null";
             var reason = Interaction.options.get("reason").value??"No reason provided";
 
             // 🤖 Get bot's member instance on this guild
