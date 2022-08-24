@@ -9,7 +9,7 @@ var Command = new Slash(
         builder: new SlashCommandBuilder().setDescription("🤔 User informations").addUserOption(user => user.setName("user").setDescription("👤 User").setRequired(true)),
         executor: (Interaction, Client) => {
 
-            var user = Interaction.options.get("user").value??"null";
+            var user = Interaction.options.get("user")??"null";
             var badges = []; //🏅 Get user badges array
 
             const supportServer = Client.guilds.cache.find(Guild => Guild.id == "1002671491827122187"); //🌍 Get a support guild
