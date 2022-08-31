@@ -96,8 +96,8 @@ Client.on('ready', async () => {
     // 🌠 Update rainbow roles on bot start
     updateRainbowRoles();
 
-    // ⌛ Update rainbow roles every 15 minutes
-    setInterval(updateRainbowRoles, 60000 * 15);
+    // ⌛ Update rainbow roles every 20 minutes
+    setInterval(updateRainbowRoles, 60000 * 20);
 
 });
 
