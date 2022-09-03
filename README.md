@@ -20,6 +20,8 @@ npm install
 yarn install
 ```
 
+#### [💻 Discord server](https://discord.gg/vwBAZR2RTJ)
+
 #### 🌍 Environment
 #### 🗃️ Create `.env` file with this content
 ```env
