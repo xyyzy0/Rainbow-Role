@@ -4,6 +4,7 @@ const fs = require('fs'); // 📁 Load default node.js File System module
 const { default: chalk } = require('chalk') // 🎨 Load chalk for console colors
 const { QuickDB } = require('quick.db'); // 📠 Load database module
 const statuses = ["🌈 Rainbow", "/about", "/role set/remove", "🔑 v.1.0.1"]; // 📃 Create a table with all bot statuses
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // 📚 Load Libs
 const Logger = require('./libs/Logger')
@@ -85,6 +86,8 @@ Client.on('ready', async () => {
 
             // 🎨 Edit rainbow role color
             await Role.edit({ color });
+            // Simple fix
+            await sleep(1500);
           }catch(err) {
             Logger.ERR("Failed changing rainbow role color for guild " + chalk.yellow(Entry.guildName??"Unknown") + " with ID " + chalk.yellow(GuildID??"Unknown"))
           };
